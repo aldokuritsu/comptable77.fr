@@ -95,28 +95,6 @@ a {
 }
 
 /* --------------------------------------------------------------------------
-   Bandeau d'annonce (orange)
-   -------------------------------------------------------------------------- */
-.top-banner {
-  background: var(--c-accent);
-  margin: -10px 0;
-  padding: 20px 0;
-}
-
-.top-banner p {
-  margin: 0 0 14.4px;
-  font-family: var(--f-roboto);
-  font-size: 16px;
-  line-height: 1.5;
-  text-align: center;
-  color: var(--c-sand);
-}
-
-.top-banner a {
-  color: #d7d7d7;
-}
-
-/* --------------------------------------------------------------------------
    Barre de contact (bleue)
    -------------------------------------------------------------------------- */
 .top-bar {

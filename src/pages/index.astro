@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import TopBanner from '../components/TopBanner.astro';
 import TopBar from '../components/TopBar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import home from '../data/home.json';
@@ -17,7 +16,6 @@ const meta = pages.find((page) => page.url === '/');
   ogType="website"
   modified={meta.modified}
 >
-  <TopBanner />
   <TopBar />
 
   <div class="home-logo">
