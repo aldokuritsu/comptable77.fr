@@ -53,3 +53,21 @@ Dernière campagne de vérification : **10 septembre 2026**.
 | Initiative Melun Val de Seine & Sud 77 — montants du prêt d'honneur | La seule source trouvée est un agrégateur (Infogreffe), mis à jour le 31/08/2025, soit plus d'un an. La plateforme est nommée sur le site, sans montant, avec un renvoi vers elle. |
 | Aides de la Région Île-de-France | Le site de la Région bloque la consultation automatisée. Aucun montant n'est publié tant qu'il n'est pas vérifié à la source. |
 | Adresses et coordonnées des SIE de Seine-et-Marne | Les pages annuaire n'ont pas été consultées. Le site nomme les secteurs (Melun, Meaux, Fontainebleau) sans donner d'adresse. |
+
+## Fabricants de PLV cités
+
+L'article [merchandising et PLV](/lancer-sa-marque/merchandising-et-plv-en-point-de-vente/)
+cite six fabricants français. Leurs sites n'ont **pas pu être consultés** depuis
+l'environnement de rédaction : les descriptions reposent sur la présentation
+publique que ces entreprises font d'elles-mêmes.
+
+En conséquence, l'article se limite volontairement à nommer et à lier, sans
+comparer les offres ni porter de jugement sur la qualité. Aucun prix, aucun
+délai, aucune capacité de production n'est avancé.
+
+**À faire à la prochaine revue :** vérifier que les liens résolvent toujours, et
+en particulier que la page profonde `kontfeel.fr/plv/stop-rayon` existe — elle
+n'a pas pu être contrôlée.
+
+**Lien d'intérêt :** l'éditeur du site est lié à Kontfeel. Le choix éditorial
+retenu est de citer plusieurs fabricants concurrents dans le même article.
