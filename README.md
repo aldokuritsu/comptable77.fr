@@ -83,6 +83,22 @@ Le site n'utilise aucun cookie. La mesure d'audience passe par
 active que si `PUBLIC_UMAMI_SRC` et `PUBLIC_UMAMI_WEBSITE_ID` sont définies
 (voir `.env.example`). Sans elles, aucune balise n'est rendue.
 
+## Vérification des données
+
+Les données chiffrées publiées sont tracées dans [`SOURCES.md`](SOURCES.md) :
+valeur retenue, source primaire, version ou date de consultation. À revérifier
+au moins une fois par an, et après chaque loi de finances.
+
+## Reste à faire
+
+- **Mentions légales.** Le site n'a pas de page de mentions légales. La LCEN
+  impose d'identifier l'éditeur réel : la signature « Antoine C. » est un nom de
+  plume et ne s'y substitue pas. Il manque l'identité de l'éditeur et le nom de
+  l'hébergeur.
+- **Ancrage local.** Trois rubriques sur six ont leur section locale vérifiée
+  (création d'entreprise, fiscalité, expertise comptable). Restent Social et RH,
+  Patrimoine, et Reprise d'entreprise, ainsi que les articles.
+
 ## Différences assumées avec le site d'origine
 
 - **Formulaire de contact** : le formulaire Elementor Pro nécessitait un
