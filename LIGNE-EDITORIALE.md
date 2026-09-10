@@ -141,6 +141,20 @@ Répond à **une** question précise, celle qui est dans le title.
   existante ne répond déjà à la même requête (cannibalisation).
 - **Maillage** : chaque article remonte vers sa rubrique et pointe vers au moins
   deux articles voisins, avec des ancres descriptives (jamais « cliquez ici »).
+- **Position des liens.** Un lien placé haut dans le texte pèse plus qu'un lien
+  en pied de page. On hiérarchise donc :
+  - **haut de page (premier tiers)** — le lien structurant : sur une rubrique,
+    les articles qui portent la décision principale du lecteur ; sur un article,
+    la remontée vers la rubrique ou l'article voisin le plus utile ;
+  - **milieu de texte** — les liens contextuels, là où le sujet les appelle
+    naturellement ;
+  - **bas de page** — les liens secondaires et les passerelles vers une autre
+    rubrique. Le bloc « À lire aussi » est généré automatiquement et exclut ce
+    qui est déjà lié plus haut : il ne sert qu'aux liens restants.
+
+  Repère chiffré : viser une **position moyenne des liens internes sous 35 %**
+  de la hauteur de page, et au moins la moitié des liens dans le premier tiers.
+  Le script d'audit est décrit ci-dessous.
 - **Fraîcheur** : la date de dernière mise à jour est affichée. Une page revue
   est réellement revue, pas juste redatée.
 
@@ -176,3 +190,16 @@ Le site affiche clairement :
 - qu'il s'agit d'un site d'information, pas d'un cabinet ;
 - comment il se rémunère, le jour où il se rémunère (mise en relation,
   partenariat, publicité) — la nature du lien commercial est annoncée.
+
+## 10. Auditer le maillage
+
+Avant de publier une série de pages, vérifier que le graphe reste sain :
+
+- **aucune page de silo sans lien entrant contextuel** (le bloc automatique de
+  bas de page ne compte pas : il faut un lien dans le corps du texte) ;
+- **position moyenne des liens sous 35 %**, moitié des liens dans le premier
+  tiers ;
+- **pas d'ancre générique** ni de page qui dépasse une dizaine de liens
+  internes ;
+- **un doublon est acceptable** quand les deux liens répondent à deux moments
+  de lecture différents ; au-delà de deux, c'est de la sur-optimisation.
