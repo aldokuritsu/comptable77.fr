@@ -1,0 +1,71 @@
+---
+import Icons from './Icons.astro';
+
+/** Bloc « Nous contacter » présent au bas de chaque page intérieure. */
+---
+
+<h3 class="contact__title">Nous contacter</h3>
+
+<div class="contact__intro">
+  <p>
+    Si vous avez des remarques ou des questions à nous poser, n’hésitez pas à nous
+    envoyer un message en passant par ce formulaire de contact. Nous vous
+    répondrons dans les meilleurs délais !
+  </p>
+</div>
+
+<div class="contact__row">
+  <div class="contact__form-col">
+    <form
+      class="contact-form"
+      name="contact"
+      method="post"
+      action="/nous-contacter/"
+    >
+      <div class="contact-form__fields">
+        <div class="contact-form__group">
+          <label class="screen-reader-text" for="form-field-name">Nom</label>
+          <input id="form-field-name" name="name" type="text" placeholder="Nom" />
+        </div>
+        <div class="contact-form__group">
+          <label class="screen-reader-text" for="form-field-email">Email</label>
+          <input
+            id="form-field-email"
+            name="email"
+            type="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div class="contact-form__group">
+          <label class="screen-reader-text" for="form-field-phone">Téléphone</label>
+          <input
+            id="form-field-phone"
+            name="phone"
+            type="text"
+            placeholder="Téléphone"
+            required
+          />
+        </div>
+        <div class="contact-form__group contact-form__group--full">
+          <label class="screen-reader-text" for="form-field-message">message</label>
+          <textarea
+            id="form-field-message"
+            name="message"
+            rows="4"
+            placeholder="Votre projet en quelques mots"></textarea>
+        </div>
+        <div class="contact-form__buttons">
+          <button type="submit">Envoyer</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="contact__aside">
+    <div class="contact__phone-icon"><Icons name="phone" /></div>
+    <h3 class="contact__phone">09 72 19 12 87</h3>
+    <p class="contact__hours">de 9:30 à 17:30</p>
+    <p class="contact__email"><strong>Email</strong> info@comptable77.fr</p>
+  </div>
+</div>

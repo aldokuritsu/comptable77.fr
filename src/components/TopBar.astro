@@ -1,0 +1,29 @@
+---
+import Icons from './Icons.astro';
+
+/** Barre bleue : téléphone, email, horaires et réseaux sociaux. */
+---
+
+<section class="top-bar">
+  <div class="top-bar__inner">
+    <ul class="top-bar__list">
+      <li><Icons name="phone" />09 72 19 12 87</li>
+      <li><Icons name="envelope" />info@comptable77.fr</li>
+      <li><Icons name="clock" />Lun. Vend. 9h30 - 17h00</li>
+    </ul>
+    <div class="top-bar__social">
+      <a
+        href="https://twitter.com/comptable77"
+        target="_blank"
+        rel="noopener"
+        aria-label="Twitter"><Icons name="twitter" /></a
+      >
+      <a
+        href="https://www.youtube.com/channel/UCPIhoZf0_HqpWZ1DqK4VnsA"
+        target="_blank"
+        rel="noopener"
+        aria-label="Youtube"><Icons name="youtube" /></a
+      >
+    </div>
+  </div>
+</section>

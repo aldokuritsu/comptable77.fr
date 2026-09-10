@@ -1,0 +1,746 @@
+/* ==========================================================================
+   comptable77.fr — feuille de style globale
+   Les valeurs (couleurs, typographies, espacements) reprennent celles du
+   site d'origine (thème Hello Elementor + kit Elementor #5).
+   ========================================================================== */
+
+:root {
+  /* Palette du kit Elementor d'origine */
+  --c-primary: #5eb2fc;
+  --c-secondary: #36434d;
+  --c-text: #7a7a7a;
+  --c-accent: #f96900;
+  --c-accent-2: #f17f29;
+  --c-sand: #dce2c8;
+  --c-heading: #16163f;
+  --c-muted: #4a4a4a;
+  --c-gold: #d3b574;
+
+  /* Piles typographiques déclarées par le site d'origine.
+     Les webfonts ne sont pas chargées sur le site original : on conserve
+     le même comportement pour un rendu identique. Pour activer les vraies
+     polices, décommenter l'import Google Fonts dans BaseLayout.astro. */
+  --f-roboto: 'Roboto', sans-serif;
+  --f-roboto-slab: 'Roboto Slab', sans-serif;
+  --f-montserrat: 'Montserrat', sans-serif;
+  --f-merriweather: 'Merriweather', sans-serif;
+  --f-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --container: 1140px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--f-system);
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+a {
+  color: var(--c-accent);
+  text-decoration: none;
+}
+
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 10px;
+  width: 100%;
+}
+
+.screen-reader-text {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 999;
+  clip: auto;
+  width: auto;
+  height: auto;
+  padding: 10px 16px;
+  background: #fff;
+  color: #000;
+}
+
+/* --------------------------------------------------------------------------
+   Bandeau d'annonce (orange)
+   -------------------------------------------------------------------------- */
+.top-banner {
+  background: var(--c-accent);
+  margin: -10px 0;
+  padding: 20px 0;
+}
+
+.top-banner p {
+  margin: 0 0 14.4px;
+  font-family: var(--f-roboto);
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--c-sand);
+}
+
+.top-banner a {
+  color: #d7d7d7;
+}
+
+/* --------------------------------------------------------------------------
+   Barre de contact (bleue)
+   -------------------------------------------------------------------------- */
+.top-bar {
+  background: var(--c-primary);
+  padding: 0 20px;
+}
+
+.top-bar__inner {
+  max-width: var(--container);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 48px;
+}
+
+.top-bar__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0 -14px;
+  padding: 0;
+}
+
+.top-bar__list li {
+  display: flex;
+  align-items: center;
+  margin: 0 14px;
+  font-family: var(--f-roboto);
+  font-size: 12px;
+  line-height: 2em;
+  color: #fff;
+}
+
+.top-bar__list svg {
+  width: 14px;
+  height: 14px;
+  fill: #fff;
+  margin-right: 11px;
+  flex: none;
+}
+
+.top-bar__social {
+  display: flex;
+  gap: 5px;
+}
+
+.top-bar__social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 10%;
+  color: #fff;
+}
+
+.top-bar__social svg {
+  width: 14px;
+  height: 14px;
+  fill: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   En-tête : logo + navigation
+   -------------------------------------------------------------------------- */
+.site-logo {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.site-logo img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+}
+
+.site-nav {
+  border-top: 1px dotted #8e8e8e;
+  border-bottom: 1px dotted #8e8e8e;
+  max-width: var(--container);
+  margin-inline: auto;
+}
+
+.site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__list a {
+  display: block;
+  padding: 14px 21px;
+  font-family: var(--f-roboto);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #303030;
+  text-decoration: none;
+  position: relative;
+}
+
+.site-nav__list a::after {
+  content: '';
+  position: absolute;
+  left: 21px;
+  right: 21px;
+  bottom: 8px;
+  height: 3px;
+  background: var(--c-accent-2);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s;
+}
+
+.site-nav__list a:hover,
+.site-nav__list a[aria-current='page'] {
+  color: var(--c-secondary);
+}
+
+.site-nav__list a:hover::after,
+.site-nav__list a[aria-current='page']::after {
+  transform: scaleX(1);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Pied de page
+   -------------------------------------------------------------------------- */
+.site-footer {
+  padding: 0 5%;
+  margin-bottom: 50px;
+}
+
+.site-footer__logo {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.site-footer__logo img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 500px;
+  max-width: 100%;
+}
+
+.site-footer__divider {
+  border: 0;
+  border-top: 1px solid var(--divider-color, #000);
+  margin: 35px 0;
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.site-footer__bottom > * {
+  flex: 1 1 300px;
+  margin: 0;
+}
+
+.site-footer__left {
+  font-family: var(--f-montserrat);
+  font-size: 15px;
+  font-weight: 300;
+  color: #000;
+  text-align: start;
+}
+
+.site-footer__right {
+  font-family: var(--f-montserrat);
+  font-size: 14px;
+  font-weight: 200;
+  color: #000;
+  text-align: end;
+}
+
+/* --------------------------------------------------------------------------
+   Gabarit des pages intérieures
+   -------------------------------------------------------------------------- */
+.single {
+  max-width: 1040px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 10;
+}
+
+.single__inner {
+  background: #fff;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+  padding: 50px 50px 30px;
+}
+
+.breadcrumb {
+  font-family: var(--f-roboto-slab);
+  font-size: 13.6px;
+  line-height: 1.5;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: var(--c-accent);
+}
+
+.page-title {
+  font-family: var(--f-roboto);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1;
+  color: #000;
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.featured-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contenu éditorial */
+.entry-content {
+  font-family: var(--f-roboto);
+  font-size: 16px;
+  line-height: 1.7em;
+  color: var(--c-text);
+}
+
+.entry-content p,
+.entry-content ul,
+.entry-content ol {
+  margin: 0 0 0.9rem;
+}
+
+.entry-content h2 {
+  font-family: var(--f-roboto);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--c-text);
+  margin: 8px 0 16px;
+}
+
+.entry-content h3 {
+  font-family: var(--f-roboto);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--c-text);
+  margin: 8px 0 16px;
+}
+
+.entry-content h4 {
+  font-family: var(--f-roboto);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--c-text);
+  margin: 8px 0 16px;
+}
+
+.entry-content a {
+  color: var(--c-accent);
+}
+
+.entry-content a:hover {
+  text-decoration: underline;
+}
+
+.entry-content ul,
+.entry-content ol {
+  padding-left: 40px;
+}
+
+.entry-content img {
+  height: auto;
+}
+
+.entry-content figure {
+  margin: 1rem 0;
+}
+
+.entry-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.entry-content th,
+.entry-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Encart auteur */
+.section-heading {
+  font-family: var(--f-roboto);
+  font-weight: 600;
+  color: var(--c-secondary);
+  font-size: 24px;
+  margin: 8px 0 16px;
+}
+
+.author-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  text-align: start;
+}
+
+.author-box__avatar img {
+  width: 161px;
+  height: auto;
+  border-radius: 500px;
+}
+
+.author-box__name {
+  font-family: var(--f-roboto);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--c-secondary);
+  margin: 8px 0 5px;
+}
+
+.author-box__bio {
+  font-family: var(--f-roboto);
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--c-text);
+}
+
+.hr-divider {
+  border: 0;
+  border-top: 1px solid var(--c-text);
+  margin: 15px 0;
+}
+
+/* --------------------------------------------------------------------------
+   Bloc « Nous contacter »
+   -------------------------------------------------------------------------- */
+.contact__title {
+  font-family: var(--f-roboto);
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #000;
+  text-align: center;
+  margin: 8px 0 16px;
+}
+
+.contact__intro {
+  color: var(--c-secondary);
+  font-family: var(--f-roboto);
+  margin-bottom: 20px;
+}
+
+.contact__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.contact__form-col {
+  width: 66.17%;
+  padding-inline: 10px;
+}
+
+.contact__aside {
+  width: 33.724%;
+  background: var(--c-secondary);
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.contact-form__fields {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -7.5px -15px;
+}
+
+.contact-form__group {
+  padding: 0 7.5px;
+  margin-bottom: 15px;
+  width: 50%;
+}
+
+.contact-form__group--full {
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font-family: var(--f-roboto);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #000;
+  background: #fff;
+  border: 0;
+  border-bottom: 1px solid #69727d;
+  border-radius: 0;
+  padding: 8px 16px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #7a7a7a;
+  opacity: 1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-bottom-color: var(--c-primary);
+}
+
+.contact-form__buttons {
+  width: 100%;
+  padding: 0 7.5px;
+  text-align: right;
+}
+
+.contact-form button {
+  font-family: var(--f-roboto);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--c-accent);
+  border: 0;
+  border-radius: 0;
+  padding: 15px 45px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: var(--c-primary);
+}
+
+.contact__phone-icon svg {
+  width: 50px;
+  height: 50px;
+  fill: var(--c-primary);
+}
+
+.contact__phone {
+  font-family: var(--f-roboto);
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #fff;
+  margin: 8px 0 0;
+}
+
+.contact__hours {
+  margin: 1px 0 14.4px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #bfbfbf;
+}
+
+.contact__email {
+  margin: 10px 0 14.4px;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.2em;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .single__inner {
+    padding: 40px 20px 20px;
+  }
+
+  .contact__title {
+    font-size: 35px;
+  }
+
+  .contact__phone {
+    font-size: 32px;
+  }
+
+  .contact__email {
+    font-size: 13px;
+  }
+
+  .contact__aside {
+    padding: 15px;
+  }
+
+  .site-logo {
+    padding: 10px 20px;
+  }
+
+  .site-logo img {
+    width: 100%;
+  }
+
+  .site-footer {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 880px) {
+  .contact__form-col,
+  .contact__aside {
+    width: 100%;
+  }
+
+  .contact__aside {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .top-bar__inner {
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px 0;
+  }
+
+  .top-bar__list {
+    justify-content: center;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin: 0 auto;
+    background: none;
+    border: 0;
+    color: #000;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .nav-toggle svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+  }
+
+  .site-nav__list {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+  }
+
+  .site-nav[data-open='true'] .site-nav__list {
+    display: flex;
+  }
+
+  .site-nav__list a {
+    text-align: center;
+    color: var(--c-secondary);
+  }
+
+  .site-nav__list a:hover,
+  .site-nav__list a[aria-current='page'] {
+    background: var(--c-accent-2);
+    color: #fff;
+  }
+
+  .site-nav__list a::after {
+    display: none;
+  }
+
+  .page-title {
+    font-size: 32px;
+  }
+
+  .entry-content h2 {
+    font-size: 26px;
+  }
+
+  .entry-content h3 {
+    font-size: 22px;
+  }
+
+  .author-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-form__group {
+    width: 100%;
+  }
+
+  .contact-form__buttons {
+    text-align: center;
+  }
+
+  .site-footer__left,
+  .site-footer__right {
+    text-align: center;
+  }
+
+  .site-footer__right {
+    font-size: 12px;
+  }
+
+  .site-footer__divider {
+    margin: 30px 0;
+  }
+}

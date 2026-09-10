@@ -1,0 +1,25 @@
+---
+/** Fil d'Ariane (rendu identique au widget Yoast/Elementor d'origine). */
+const { items = [] } = Astro.props;
+---
+
+{
+  items.length > 0 && (
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <span>
+        {items.map((item, i) => (
+          <>
+            {i > 0 && <span> » </span>}
+            {item.href ? (
+              <a href={item.href}>{item.text}</a>
+            ) : (
+              <span class="breadcrumb_last" aria-current="page">
+                {item.text}
+              </span>
+            )}
+          </>
+        ))}
+      </span>
+    </nav>
+  )
+}

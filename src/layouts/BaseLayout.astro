@@ -1,0 +1,67 @@
+---
+import '../styles/global.css';
+
+const {
+  title,
+  description = '',
+  canonical,
+  ogImage = 'https://comptable77.fr/wp-content/uploads/2021/10/logo-carre-comptable77.png',
+  ogType = 'article',
+  modified,
+} = Astro.props;
+
+const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonicalURL} />
+    <meta
+      property="og:site_name"
+      content="Comptable77 - Création d'entreprise et expertise comptable 77"
+    />
+    {modified && <meta property="article:modified_time" content={modified} />}
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="icon"
+      href="/wp-content/uploads/2021/10/cropped-logo-carre-comptable77-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="/wp-content/uploads/2021/10/cropped-logo-carre-comptable77-192x192.png"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/wp-content/uploads/2021/10/cropped-logo-carre-comptable77-180x180.png"
+    />
+
+    <!--
+      Le site d'origine déclare Roboto / Montserrat / Merriweather sans charger
+      les webfonts : le rendu se fait donc avec les polices système. Pour
+      activer les vraies polices, décommenter la ligne ci-dessous.
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@200;300;600&family=Roboto+Slab:wght@400&family=Roboto:wght@300;400;500;600;900&display=swap" />
+    -->
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip-link screen-reader-text" href="#content">Aller au contenu</a>
+    <slot />
+  </body>
+</html>

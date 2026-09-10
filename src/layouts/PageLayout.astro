@@ -1,0 +1,55 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import AuthorBox from '../components/AuthorBox.astro';
+import ContactSection from '../components/ContactSection.astro';
+
+const { page } = Astro.props;
+---
+
+<BaseLayout
+  title={page.title}
+  description={page.description}
+  canonical={page.canonical}
+  ogImage={page.ogImage}
+  modified={page.modified}
+>
+  <SiteHeader />
+
+  <main id="content">
+    <section class="single">
+      <div class="single__inner">
+        <Breadcrumb items={page.breadcrumb} />
+
+        <h1 class="page-title">{page.h1}</h1>
+
+        {
+          page.featured && (
+            <figure class="featured-image">
+              <img
+                src={page.featured.src}
+                srcset={page.featured.srcset || undefined}
+                sizes="(max-width: 640px) 100vw, 640px"
+                width={page.featured.width}
+                height={page.featured.height}
+                alt={page.featured.alt || page.h1}
+              />
+            </figure>
+          )
+        }
+
+        <div class="entry-content" set:html={page.content} />
+
+        <AuthorBox />
+
+        <hr class="hr-divider" />
+
+        <ContactSection />
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>

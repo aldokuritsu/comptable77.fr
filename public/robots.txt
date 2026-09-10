@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://comptable77.fr/sitemap_index.xml

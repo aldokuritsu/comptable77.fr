@@ -1,0 +1,17 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import pages from '../data/pages.json';
+
+export function getStaticPaths() {
+  return pages
+    .filter((page) => page.url !== '/')
+    .map((page) => ({
+      params: { slug: page.url.replace(/^\/|\/$/g, '') },
+      props: { page },
+    }));
+}
+
+const { page } = Astro.props;
+---
+
+<PageLayout page={page} />

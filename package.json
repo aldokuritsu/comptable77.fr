@@ -1,0 +1,17 @@
+{
+  "name": "comptable77",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site comptable77.fr recréé avec Astro",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^7.3.2"
+  }
+}
