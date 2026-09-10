@@ -11,6 +11,14 @@ const {
 } = Astro.props;
 
 const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
+
+/**
+ * Mesure d'audience Umami, sans cookie. Inactive tant que les deux variables
+ * d'environnement ne sont pas définies (voir .env.example).
+ */
+const umamiSrc = import.meta.env.PUBLIC_UMAMI_SRC;
+const umamiId = import.meta.env.PUBLIC_UMAMI_WEBSITE_ID;
+const umami = Boolean(umamiSrc && umamiId);
 ---
 
 <!doctype html>
@@ -58,6 +66,8 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
       activer les vraies polices, décommenter la ligne ci-dessous.
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@200;300;600&family=Roboto+Slab:wght@400&family=Roboto:wght@300;400;500;600;900&display=swap" />
     -->
+    {umami && <script defer src={umamiSrc} data-website-id={umamiId}></script>}
+
     <slot name="head" />
   </head>
   <body>

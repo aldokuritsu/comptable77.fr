@@ -15,6 +15,8 @@ const { page } = Astro.props;
 /** Pages de service : ni date d'article, ni avertissement, ni encart auteur. */
 const SERVICE_PAGES = ['/nous-contacter/', '/privacy-policy/', '/a-propos-de-ce-site/'];
 const isArticle = !SERVICE_PAGES.includes(page.url);
+/** La politique de confidentialité affiche sa date sans être un article. */
+const showDate = isArticle || page.url === '/privacy-policy/';
 ---
 
 <BaseLayout
@@ -36,7 +38,7 @@ const isArticle = !SERVICE_PAGES.includes(page.url);
         <h1 class="page-title">{page.h1}</h1>
 
         {
-          isArticle && page.modified && (
+          showDate && page.modified && (
             <p class="page-meta">
               Mis à jour le <time datetime={page.modified}>{formatDate(page.modified)}</time>
             </p>

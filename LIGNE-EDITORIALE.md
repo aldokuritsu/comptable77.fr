@@ -76,10 +76,20 @@ Sources locales à exploiter :
 - URSSAF Île-de-France, SIE de Melun / Meaux / Fontainebleau
 - Pépinières et incubateurs du département
 
-**Règle de vérification :** toute donnée locale (montant d'aide, délai, adresse,
-condition d'éligibilité) est sourcée et datée dans le texte, et revérifiée à
-chaque mise à jour de la page. Une donnée qu'on ne peut pas vérifier ne se
-publie pas.
+**Règle de vérification :** toute donnée chiffrée — locale (montant d'aide,
+délai, condition d'éligibilité) comme nationale (seuil fiscal, taux, plafond) —
+répond aux trois conditions suivantes :
+
+1. elle provient d'une **source primaire** (service-public.fr, impots.gouv.fr,
+   Légifrance, BOFiP, URSSAF, ou le site de l'organisme concerné) — jamais d'un
+   blog ou d'un agrégateur, qui recopient et se périment ;
+2. la source consultée a **moins d'un an** ;
+3. l'année d'application est **écrite dans le texte** (« au 1er janvier 2026… »)
+   pour que l'obsolescence soit visible du lecteur et du relecteur.
+
+Une donnée qu'on ne peut pas vérifier ne se publie pas. Mieux vaut renvoyer le
+lecteur vers la source officielle qu'afficher un chiffre invérifiable : sur ces
+sujets, un montant périmé est pire que pas de montant.
 
 ## 5. Les six rubriques
 
@@ -145,6 +155,20 @@ l'ordre :
 4. Publier le flux d'actualité locale (échéances, nouvelles aides)
 
 ## 9. Transparence
+
+**La signature « Antoine C. » est un nom de plume**, pas une personne réelle.
+Deux conséquences opposables :
+
+- on ne lui prête **aucune biographie factuelle** (parcours, diplôme, années
+  d'expérience, cabinet d'origine) : inventer un CV, c'est fabriquer le signal
+  d'autorité que Google cherche précisément à détecter, et tromper le lecteur
+  sur un sujet où il engage son argent ;
+- l'autorité du site ne repose donc pas sur la personne mais sur **la qualité
+  des sources** : c'est la règle de vérification de la section 4 qui en tient
+  lieu, et elle n'est pas négociable.
+
+Les mentions légales, elles, doivent identifier l'éditeur réel du site : c'est
+une obligation de la LCEN, à laquelle un nom de plume ne se substitue pas.
 
 Le site affiche clairement :
 

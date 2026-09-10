@@ -76,6 +76,13 @@ indépendante, jamais un cabinet d'expertise comptable.** Le balisage
 `schema.org` reflète ce positionnement (`WebSite`, `Article`,
 `BreadcrumbList` — jamais `AccountingService` ni `LocalBusiness`).
 
+## Mesure d'audience
+
+Le site n'utilise aucun cookie. La mesure d'audience passe par
+[Umami](https://umami.is/), sans cookie ni identifiant publicitaire, et n'est
+active que si `PUBLIC_UMAMI_SRC` et `PUBLIC_UMAMI_WEBSITE_ID` sont définies
+(voir `.env.example`). Sans elles, aucune balise n'est rendue.
+
 ## Différences assumées avec le site d'origine
 
 - **Formulaire de contact** : le formulaire Elementor Pro nécessitait un
