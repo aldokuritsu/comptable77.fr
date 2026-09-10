@@ -67,6 +67,15 @@ sont déclarées mais les webfonts ne sont pas chargées : le rendu utilise les
 polices système, à l'identique. Pour charger les vraies polices, décommenter le
 lien Google Fonts dans `src/layouts/BaseLayout.astro`.
 
+## Ligne éditoriale
+
+Le positionnement du site et les règles de rédaction sont décrits dans
+[`LIGNE-EDITORIALE.md`](LIGNE-EDITORIALE.md). À lire avant toute modification de
+contenu. Règle principale : **le site est une publication d'information
+indépendante, jamais un cabinet d'expertise comptable.** Le balisage
+`schema.org` reflète ce positionnement (`WebSite`, `Article`,
+`BreadcrumbList` — jamais `AccountingService` ni `LocalBusiness`).
+
 ## Différences assumées avec le site d'origine
 
 - **Formulaire de contact** : le formulaire Elementor Pro nécessitait un
@@ -79,6 +88,11 @@ lien Google Fonts dans `src/layouts/BaseLayout.astro`.
 - **Lien « Politique de confidentialité »** du pied de page d'accueil : il
   pointait vers l'accueil sur le site d'origine, il pointe désormais vers
   `/privacy-policy/`.
+- **Contenu réécrit** : les mentions de mise en vente du site ont été
+  supprimées, et les passages présentant le site comme un cabinet d'expertise
+  comptable ont été réécrits (voir la charte éditoriale). Les balises `title`,
+  `meta description` et `h1` ont été refaites, et un maillage interne
+  systématique a été ajouté.
 - **Avatar de l'auteur** : toujours servi par Gravatar, comme sur le site
   d'origine.
 - Les animations d'apparition et effets de parallaxe d'Elementor ne sont pas

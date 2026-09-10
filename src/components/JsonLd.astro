@@ -1,0 +1,70 @@
+---
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, rubriqueOf, labelOf } from '../lib/site';
+
+/**
+ * Données structurées. Le site est une publication, pas un prestataire :
+ * on déclare WebSite / Article / BreadcrumbList, jamais AccountingService
+ * ni LocalBusiness, qui laisseraient croire à une activité réglementée.
+ */
+const { page, type = 'article' } = Astro.props;
+
+const url = SITE_URL + page.url;
+const logo = `${SITE_URL}/wp-content/uploads/2021/10/logo-carre-comptable77.png`;
+
+const publisher = {
+  '@type': 'Organization',
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: { '@type': 'ImageObject', url: logo },
+};
+
+const graph: Record<string, unknown>[] = [
+  {
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    inLanguage: 'fr-FR',
+    description:
+      "Site d'information indépendant sur la création et la gestion d'entreprise en Seine-et-Marne.",
+    publisher,
+  },
+];
+
+if (type === 'article') {
+  const rubrique = rubriqueOf(page.url);
+  const crumbs = [
+    { name: 'Accueil', item: SITE_URL + '/' },
+    ...(rubrique ? [{ name: labelOf(rubrique), item: SITE_URL + rubrique }] : []),
+    { name: page.h1, item: url },
+  ];
+
+  graph.push({
+    '@type': 'Article',
+    '@id': `${url}#article`,
+    headline: page.h1,
+    description: page.description,
+    inLanguage: 'fr-FR',
+    mainEntityOfPage: url,
+    ...(page.modified ? { datePublished: page.modified, dateModified: page.modified } : {}),
+    author: { '@type': 'Person', name: AUTHOR_NAME },
+    publisher,
+    ...(page.featured ? { image: SITE_URL + page.featured.src } : {}),
+  });
+
+  graph.push({
+    '@type': 'BreadcrumbList',
+    '@id': `${url}#breadcrumb`,
+    itemListElement: crumbs.map((crumb, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: crumb.name,
+      item: crumb.item,
+    })),
+  });
+}
+
+const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

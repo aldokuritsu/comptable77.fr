@@ -2,7 +2,7 @@
  "heroId": [
   "elementor-element-6f6384ff"
  ],
- "heroHeading": "Un expert pour vous accompagner dans votre vie d'entrepreneur",
+ "heroHeading": "Créer et gérer son entreprise en Seine-et-Marne",
  "heroText": "Etre entrepreneur c’est une vocation.\nNe perdez pas de temps avec ce qui ne vous intéresse pas : nous sommes là pour vous aider dans tout ce qui vous ennuie.  02197f1ce3580304",
  "butHeading": "Notre but",
  "butText": "<p>Ce site a pour vocation de vous donner des astuces pour votre vie d’entrepreneur. Nous connaissons les défis liés à la gestion d’une entreprise, c’est pourquoi nous écrivons pour vous aider à les surmonter. Notre objectif est de faire en sorte que vous puissiez vous concentrer sur ce qui compte le plus : la croissance de votre entreprise.</p>",
@@ -16,17 +16,17 @@
   },
   {
    "title": "Comptabilité",
-   "desc": "Éliminez les soucis que vous occasionne la gestion comptable de votre entreprise. Nous vous mettons en relation avec les meilleurs experts comptables.",
+   "desc": "Faut-il un expert-comptable dès le départ, que lui confier et comment le choisir en Seine-et-Marne ? Nos repères pour décider.",
    "href": "/cabinet-dexpert-comptable-melun/"
   },
   {
    "title": "Fiscalité",
-   "desc": "Ne soyez plus seul face à vos problèmes fiscaux : il y a toujours moyen de faire quelques optimisations.",
+   "desc": "Ne restez pas seul face à vos questions fiscales : voici ce que votre entreprise devra payer, quand, et sur quoi vous pouvez arbitrer.",
    "href": "/fiscalite-des-entreprises-en-seine-et-marne-77/"
   },
   {
    "title": "Social",
-   "desc": "Ne laissez donc pas votre entreprise prendre du retard à cause d’un manque de connaissances sur la gestion du personnel.",
+   "desc": "Ne laissez pas votre entreprise prendre du retard à cause d’un manque de repères sur la gestion du personnel.",
    "href": "/social-et-ressources-humaines-pour-entreprises-du-77/"
   },
   {
@@ -36,12 +36,12 @@
   },
   {
    "title": "Patrimoine",
-   "desc": "Conseils & accompagnements pour vous aider à gérer votre patrimoine de chef d'entreprise.",
+   "desc": "Conseils & repères pour vous aider à gérer votre patrimoine de chef d'entreprise.",
    "href": "/gestion-de-patrimoine-a-melun/"
   }
  ],
  "aproposHeading": "A propos",
- "aproposText": "<p>Si vous êtes un entrepreneur à Melun, Seine et Marne et que vous avez besoin d’aide pour votre comptabilité, votre fiscalité ou vos ressources humaines, alors comptable77.fr est le site qu’il vous faut !</p><p>Nous pouvons vous mettre en relation avec une équipe d’experts qui peuvent apporter un soutien aux entrepreneurs à chaque étape de leur parcours professionnel. Qu’il s’agisse de conseils sur la création de votre entreprise ou d’orientations sur les avantages fiscaux dont vous devriez profiter, nous veillerons à ce que tout se passe bien.</p><p>Vous n’avez à vous soucier de rien car les experts de notre résaeau s’occupent de tous les détails afin que vous puissiez vous concentrer sur ce qui compte le plus : la croissance de votre entreprise. Avec nous à vos côtés, vous n’aurez plus à passer des nuits blanches à essayer de comprendre des documents juridiques compliqués ou à vous demander si vous avez fait le bon choix en choisissant un comptable. Nous vous le promettons ! Tout cela et bien plus encore est disponible sur comptable77.fr ! Prenez contact dès aujourd’hui pour une consultation gratuite avec l’un de nos cabinets d’experts comptables.</p>",
+ "aproposText": "<p>comptable77.fr est un site d’information indépendant destiné aux personnes qui créent ou dirigent une entreprise en Seine-et-Marne. Nous ne sommes pas un cabinet d’expertise comptable : nous expliquons, nous documentons, et nous vous aidons à savoir quand faire appel à un professionnel.</p><p>Choisir un statut, comprendre ce que l’on va devoir payer, savoir s’il faut un comptable dès le premier jour, trouver un financement près de chez soi : ces questions ont des réponses, mais elles sont dispersées entre des textes officiels illisibles et des portails nationaux qui ignorent tout de votre département. Notre travail consiste à les rassembler et à les traduire en français clair.</p><p>Vous trouverez ici des explications sur les statuts juridiques, la comptabilité, la fiscalité et les obligations sociales, ainsi que de l’information locale : aides, guichets et réseaux d’accompagnement du 77. Et si votre situation demande l’avis d’un professionnel, nous vous le dirons plutôt que de vous laisser deviner.</p>",
  "postsHeading": "Les dernières publications du site",
  "posts": [
   {
@@ -56,7 +56,7 @@
    "href": "/social-et-ressources-humaines-pour-entreprises-du-77/recruter-collaborateur-en-europe/",
    "img": "/wp-content/uploads/2021/12/recrutement-300x200.jpg",
    "srcset": "/wp-content/uploads/2021/12/recrutement-300x200.jpg 300w, /wp-content/uploads/2021/12/recrutement.jpg 640w",
-   "title": "Les spécificités du recrutement dans l’Union Européene",
+   "title": "Les spécificités du recrutement dans l’Union européenne",
    "excerpt": "La libre entreprise pour ceux qui créent. Il est moins compliqué pour les indépendants des nouveaux États membres de l’UE de s’orienter dans le système",
    "more": "Lire la suite »"
   },

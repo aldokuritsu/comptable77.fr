@@ -1,0 +1,52 @@
+---
+import { rubriqueOf, isRubrique, unlinkedChildren, siblingsOf, labelOf } from '../lib/site';
+
+/**
+ * Maillage interne systématique :
+ * - sur un article, remontée vers sa rubrique + articles voisins ;
+ * - sur une rubrique, les articles qui ne sont pas déjà liés dans le corps du texte.
+ */
+const { url } = Astro.props;
+
+const rubrique = rubriqueOf(url);
+const siblings = rubrique ? siblingsOf(url) : [];
+const missing = isRubrique(url) ? unlinkedChildren(url) : [];
+---
+
+{
+  rubrique && (
+    <nav class="related" aria-label="Poursuivre la lecture">
+      <p class="related__up">
+        Cet article fait partie de la rubrique{' '}
+        <a href={rubrique}>{labelOf(rubrique)}</a>.
+      </p>
+      {siblings.length > 0 && (
+        <>
+          <h3 class="related__title">À lire aussi</h3>
+          <ul class="related__list">
+            {siblings.map((sibling) => (
+              <li>
+                <a href={sibling.url}>{sibling.h1}</a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </nav>
+  )
+}
+
+{
+  missing.length > 0 && (
+    <nav class="related" aria-label="Articles de la rubrique">
+      <h3 class="related__title">Également dans cette rubrique</h3>
+      <ul class="related__list">
+        {missing.map((child) => (
+          <li>
+            <a href={child.url}>{child.h1}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}

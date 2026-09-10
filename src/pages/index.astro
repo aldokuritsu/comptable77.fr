@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TopBar from '../components/TopBar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import JsonLd from '../components/JsonLd.astro';
 import home from '../data/home.json';
 import pages from '../data/pages.json';
 
@@ -16,6 +17,8 @@ const meta = pages.find((page) => page.url === '/');
   ogType="website"
   modified={meta.modified}
 >
+  <JsonLd slot="head" page={meta} type="page" />
+
   <TopBar />
 
   <div class="home-logo">

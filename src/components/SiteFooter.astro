@@ -1,10 +1,11 @@
 ---
 /**
- * Pied de page. La variante « home » reprend les textes et la couleur de
- * séparateur utilisés sur la page d'accueil du site d'origine.
+ * Pied de page. La variante « home » reprend la couleur de séparateur
+ * utilisée sur la page d'accueil du site d'origine.
  */
 const { variant = 'default' } = Astro.props;
 const isHome = variant === 'home';
+const year = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
@@ -23,23 +24,12 @@ const isHome = variant === 'home';
 
   <div class="site-footer__bottom">
     <p class="site-footer__left">
-      {
-        isHome
-          ? 'Vous aimeriez utiliser ce site comme vitrine de votre activité ? '
-          : 'Vous avez un cabinet comptable ? '
-      }<a href="/a-propos-de-ce-site/">Lisez notre page «&nbsp;à propos&nbsp;»</a>
+      Site d'information indépendant sur la création et la gestion d'entreprise
+      en Seine-et-Marne. <a href="/a-propos-de-ce-site/">À propos</a>
     </p>
     <p class="site-footer__right">
-      {
-        isHome ? (
-          <>
-            © Tous droits réservés 2021.{' '}
-            <a href="/privacy-policy/">Politique de confidentialité</a>
-          </>
-        ) : (
-          '© Tous droits réservés 2021. Ce site n’enregistre pas de cookies.'
-        )
-      }
+      © {year} comptable77.fr. Ce site n’enregistre pas de cookies.
+      <a href="/privacy-policy/">Politique de confidentialité</a>
     </p>
   </div>
 </footer>

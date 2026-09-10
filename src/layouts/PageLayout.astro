@@ -5,8 +5,16 @@ import SiteFooter from '../components/SiteFooter.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import AuthorBox from '../components/AuthorBox.astro';
 import ContactSection from '../components/ContactSection.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
+import Disclaimer from '../components/Disclaimer.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { formatDate } from '../lib/site';
 
 const { page } = Astro.props;
+
+/** Pages de service : ni date d'article, ni avertissement, ni encart auteur. */
+const SERVICE_PAGES = ['/nous-contacter/', '/privacy-policy/', '/a-propos-de-ce-site/'];
+const isArticle = !SERVICE_PAGES.includes(page.url);
 ---
 
 <BaseLayout
@@ -16,14 +24,24 @@ const { page } = Astro.props;
   ogImage={page.ogImage}
   modified={page.modified}
 >
+  <JsonLd slot="head" page={page} type={isArticle ? 'article' : 'page'} />
+
   <SiteHeader />
 
   <main id="content">
-    <section class="single">
+    <article class="single">
       <div class="single__inner">
         <Breadcrumb items={page.breadcrumb} />
 
         <h1 class="page-title">{page.h1}</h1>
+
+        {
+          isArticle && page.modified && (
+            <p class="page-meta">
+              Mis à jour le <time datetime={page.modified}>{formatDate(page.modified)}</time>
+            </p>
+          )
+        }
 
         {
           page.featured && (
@@ -42,13 +60,17 @@ const { page } = Astro.props;
 
         <div class="entry-content" set:html={page.content} />
 
-        <AuthorBox />
+        <RelatedLinks url={page.url} />
+
+        {isArticle && <Disclaimer />}
+
+        {isArticle && <AuthorBox />}
 
         <hr class="hr-divider" />
 
         <ContactSection />
       </div>
-    </section>
+    </article>
   </main>
 
   <SiteFooter />
