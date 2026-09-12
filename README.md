@@ -79,9 +79,21 @@ indépendante, jamais un cabinet d'expertise comptable.** Le balisage
 ## Mesure d'audience
 
 Le site n'utilise aucun cookie. La mesure d'audience passe par
-[Umami](https://umami.is/), sans cookie ni identifiant publicitaire, et n'est
-active que si `PUBLIC_UMAMI_SRC` et `PUBLIC_UMAMI_WEBSITE_ID` sont définies
-(voir `.env.example`). Sans elles, aucune balise n'est rendue.
+[Umami](https://umami.is/), sans cookie ni identifiant publicitaire, sur
+l'instance `umami.doknet.cloud`.
+
+Le script est **actif par défaut** : l'URL et l'identifiant de site, qui sont des
+valeurs publiques, sont inscrits dans `src/layouts/BaseLayout.astro`. Trois
+variables d'environnement permettent de s'en écarter (voir `.env.example`) :
+
+| Variable | Effet |
+| --- | --- |
+| `PUBLIC_UMAMI_SRC` | pointe une autre instance Umami |
+| `PUBLIC_UMAMI_WEBSITE_ID` | change l'identifiant de site |
+| `PUBLIC_UMAMI_DISABLED=1` | coupe le suivi (préproduction, tests) |
+
+Ce dispositif est décrit au lecteur dans la [politique de
+confidentialité](https://comptable77.fr/privacy-policy/).
 
 ## Vérification des données
 
