@@ -1,7 +1,29 @@
-import pages from '../data/pages.json';
+import allPages from '../data/pages.json';
 import nav from '../data/nav.json';
 
-export type Page = (typeof pages)[number];
+export type Page = (typeof allPages)[number] & { publishedAt?: string };
+
+/**
+ * Publication échelonnée. Une page portant un `publishedAt` dans le futur n'est
+ * ni générée, ni listée dans le sitemap, ni proposée dans le maillage : elle
+ * apparaît d'elle-même au premier build lancé après sa date.
+ *
+ * Il faut donc reconstruire le site régulièrement (une tâche planifiée
+ * quotidienne suffit) pour que les articles programmés sortent.
+ *
+ * PUBLIC_PREVIEW_DRAFTS=1 force l'affichage de tout, pour relire avant l'heure.
+ */
+const PREVIEW = import.meta.env.PUBLIC_PREVIEW_DRAFTS === '1';
+const NOW = Date.now();
+
+export const pages: Page[] = (allPages as Page[]).filter(
+  (page) => PREVIEW || !page.publishedAt || Date.parse(page.publishedAt) <= NOW
+);
+
+/** Pages programmées, non encore publiées — utile pour les diagnostics. */
+export const scheduledPages: Page[] = (allPages as Page[]).filter(
+  (page) => page.publishedAt && Date.parse(page.publishedAt) > NOW
+);
 
 export const SITE_URL = 'https://comptable77.fr';
 export const SITE_NAME = 'comptable77.fr';

@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import pages from '../data/pages.json';
+import { pages } from '../lib/site';
 
 const SITE = 'https://comptable77.fr';
 

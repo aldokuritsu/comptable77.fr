@@ -191,7 +191,24 @@ Le site affiche clairement :
 - comment il se rémunère, le jour où il se rémunère (mise en relation,
   partenariat, publicité) — la nature du lien commercial est annoncée.
 
-## 10. Auditer le maillage
+## 10. Publication programmée
+
+Un article peut porter un champ `publishedAt`. Tant que cette date n'est pas
+atteinte, la page **n'est pas générée** : ni URL, ni sitemap, ni maillage. Elle
+apparaît d'elle-même au premier build lancé après sa date.
+
+Deux conséquences pratiques :
+
+- **le site doit être reconstruit régulièrement** — une tâche planifiée
+  quotidienne suffit — sans quoi les articles programmés ne sortent jamais ;
+- **un article ne peut pas citer un article publié après lui.** Le lien serait
+  mort jusqu'à la publication de sa cible. La vérification est scriptée : elle
+  compare la date de chaque page à celle de ses liens sortants.
+
+`PUBLIC_PREVIEW_DRAFTS=1` génère tout, y compris les articles à venir, pour
+relire avant l'heure.
+
+## 11. Auditer le maillage
 
 Avant de publier une série de pages, vérifier que le graphe reste sain :
 

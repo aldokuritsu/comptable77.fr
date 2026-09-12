@@ -71,3 +71,31 @@ n'a pas pu être contrôlée.
 
 **Lien d'intérêt :** l'éditeur du site est lié à Kontfeel. Le choix éditorial
 retenu est de citer plusieurs fabricants concurrents dans le même article.
+
+## Articles publiés en septembre 2026
+
+| Donnée | Valeur retenue | Source primaire | Version |
+| --- | --- | --- | --- |
+| Facturation électronique — réception | obligatoire pour toutes les entreprises assujetties à la TVA depuis le 01/09/2026 | impots.gouv.fr, « Je découvre la facturation électronique » | modifié le 26/05/2026 |
+| Facturation électronique — émission GE et ETI | 01/09/2026, avec transmission des données de transaction et de paiement | impots.gouv.fr, FAQ « À partir de quand suis-je concerné » | modifié le 16/01/2026 |
+| Facturation électronique — émission PME et micro | 01/09/2027 | impots.gouv.fr, même FAQ | modifié le 16/01/2026 |
+| Périmètre | toutes les entreprises assujetties, y compris franchise en base et micro-entrepreneurs ; une entreprise qui n'émet pas de facture doit pouvoir en recevoir | impots.gouv.fr | modifié le 26/05/2026 |
+| Plateforme agréée | opérateur immatriculé par la DGFiP pour trois ans renouvelables ; une solution « compatible » non immatriculée n'est pas habilitée | impots.gouv.fr, espace plateformes agréées | consulté le 12/09/2026 |
+| PFU sur dividendes | 31,4 % depuis le 01/01/2026 (12,8 % IR + 18,6 % prélèvements sociaux), contre 30 % avant | Bpifrance Création, régime fiscal et social des dividendes | consulté le 12/09/2026 |
+| Option barème progressif | n'est plus irrévocable depuis la loi de finances pour 2026, applicable à l'IR dû au titre de 2026 | Bpifrance Création | consulté le 12/09/2026 |
+| Dividendes des TNS | cotisations sociales sur la fraction supérieure à 10 % du capital social, des primes d'émission et des sommes en compte courant | Bpifrance Création | consulté le 12/09/2026 |
+| DPAE | à adresser à l'Urssaf avant la prise de fonction, au plus tôt dans les 8 jours précédant l'embauche | urssaf.fr, déclaration préalable à l'embauche | consulté le 12/09/2026 |
+| Visite d'information et de prévention | dans les 3 mois suivant la prise effective du poste, sauf dispense | urssaf.fr / Bpifrance Création | consulté le 12/09/2026 |
+| Statut unique de l'entrepreneur individuel | en vigueur depuis le 15/05/2022 ; séparation automatique des patrimoines, sans déclaration d'affectation ; création d'EIRL impossible | Bpifrance Création, entrepreneur individuel | consulté le 12/09/2026 |
+| Option IS de l'entrepreneur individuel | possible au régime réel, irrévocable passé le délai de renonciation courant jusqu'au 5e exercice suivant | Bpifrance Création / impots.gouv.fr | consulté le 12/09/2026 |
+| Part des créations en entreprise individuelle | 74 % des créateurs en 2023, dont 63 % en micro-entreprise | Bpifrance Création | consulté le 12/09/2026 |
+
+> **Point de vigilance dividendes.** Le PFU est passé de 30 % à 31,4 % au
+> 1<sup>er</sup> janvier 2026. Beaucoup de contenus en ligne affichent encore
+> 30 %. Vérifier ce taux à chaque revue annuelle.
+
+## Sujet reporté
+
+| Sujet | Pourquoi il n'est pas publié |
+| --- | --- |
+| REP emballages, signalétique Triman et info-tri | Prévu pour la rubrique « Lancer sa marque ». Les sources primaires (ecologie.gouv.fr, ademe.fr, citeo.com) sont inaccessibles depuis l'environnement de rédaction. Sujet à reprendre dès que ces domaines sont consultables : c'est une obligation réglementaire que beaucoup de jeunes marques découvrent trop tard. |

@@ -101,6 +101,19 @@ Les données chiffrées publiées sont tracées dans [`SOURCES.md`](SOURCES.md) 
 valeur retenue, source primaire, version ou date de consultation. À revérifier
 au moins une fois par an, et après chaque loi de finances.
 
+## Publication programmée
+
+Les pages portant un champ `publishedAt` dans le futur ne sont pas générées.
+Elles apparaissent au premier build lancé après leur date : **planifiez une
+reconstruction quotidienne**, sinon rien ne sort.
+
+```bash
+npm run build                      # publie ce qui est dû
+PUBLIC_PREVIEW_DRAFTS=1 npm run build   # génère aussi les articles à venir
+```
+
+Articles programmés à ce jour : voir `publishedAt` dans `src/data/pages.json`.
+
 ## Reste à faire
 
 - **Mentions légales.** Le site n'a pas de page de mentions légales. La LCEN

@@ -4,7 +4,7 @@ import TopBar from '../components/TopBar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import JsonLd from '../components/JsonLd.astro';
 import home from '../data/home.json';
-import pages from '../data/pages.json';
+import { pages } from '../lib/site';
 
 const meta = pages.find((page) => page.url === '/');
 ---
