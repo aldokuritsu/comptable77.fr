@@ -19,7 +19,7 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
  * d'environnement (voir .env.example) pour pointer une autre instance, et
  * PUBLIC_UMAMI_DISABLED=1 coupe le suivi — utile en préproduction.
  */
-const umamiSrc = import.meta.env.PUBLIC_UMAMI_SRC ?? 'https://umami.doknet.cloud/script.js';
+const umamiSrc = import.meta.env.PUBLIC_UMAMI_SRC ?? 'https://umami.doknets.fr/script.js';
 const umamiId =
   import.meta.env.PUBLIC_UMAMI_WEBSITE_ID ?? '61383fe3-43fb-4490-9e5b-467796f3945c';
 const umami = Boolean(umamiSrc && umamiId) && import.meta.env.PUBLIC_UMAMI_DISABLED !== '1';
