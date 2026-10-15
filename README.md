@@ -80,7 +80,7 @@ indépendante, jamais un cabinet d'expertise comptable.** Le balisage
 
 Le site n'utilise aucun cookie. La mesure d'audience passe par
 [Umami](https://umami.is/), sans cookie ni identifiant publicitaire, sur
-l'instance `umami.doknet.cloud`.
+l'instance `umami.doknets.fr`.
 
 Le script est **actif par défaut** : l'URL et l'identifiant de site, qui sont des
 valeurs publiques, sont inscrits dans `src/layouts/BaseLayout.astro`. Trois
